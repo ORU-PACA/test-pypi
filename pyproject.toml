@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "oru-paca-test-init"           # Ne changez pas ce nom pour l'instant
+name = "test-pypi"           # Ne changez pas ce nom pour l'instant
 version = "0.0.5"
 description = "Test d'initialisation"
 readme = "README.md"
