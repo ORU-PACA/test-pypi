@@ -10,5 +10,6 @@ readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "Louis Clavel" }]
 
+
 [tool.setuptools]
 packages = [] # Important pour un dummy package
