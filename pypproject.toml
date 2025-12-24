@@ -1,0 +1,5 @@
+[project]
+name = "oru-paca-test-init"
+version = "0.0.1"
+description = "Initialisation du registre PyPI"
+dependencies = []
