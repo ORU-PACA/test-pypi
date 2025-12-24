@@ -1,5 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "oru-paca-test-init"
-version = "0.0.1"
-description = "Initialisation du registre PyPI"
-dependencies = []
+name = "oru-paca-test-init"           # Ne changez pas ce nom pour l'instant
+version = "0.0.4"
+description = "Test d'initialisation"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Louis Clavel" }]
+
+[tool.setuptools]
+packages = [] # Important pour un dummy package
