@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oru-paca-test-init"           # Ne changez pas ce nom pour l'instant
-version = "0.0.4"
+version = "0.0.5"
 description = "Test d'initialisation"
 readme = "README.md"
 requires-python = ">=3.8"
