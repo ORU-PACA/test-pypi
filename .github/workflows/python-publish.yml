@@ -45,4 +45,4 @@ jobs:
           # FORCE la destination vers votre organisation
           repository-url: https://pypi.pkg.github.com/ORU-PACA/
           # Utilise le jeton généré automatiquement par GitHub
-          password: ${{ secrets.GITHUB_TOKEN }}
+          ssword: ${{ secrets.MY_NEW_TOKEN }}
