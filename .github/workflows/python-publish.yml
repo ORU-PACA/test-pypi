@@ -48,6 +48,6 @@ jobs:
         with:
           packages-dir: dist/
           # L'URL doit se terminer par / pour éviter le 404 sur GitHub
-          repository-url: https://pypi.pkg.github.com/ORU-PACA/test-pypi/
+          repository-url: https://pypi.pkg.github.com/ORU-PACA/
           password: ${{ secrets.GITHUB_TOKEN }}
           attestations: false
