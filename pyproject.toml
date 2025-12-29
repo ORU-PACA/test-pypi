@@ -1,16 +1,21 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "oru-test-init-cl"
-version = "0.1.0"                      # Pensez à incrémenter la version
-description = "Outil interne ORU-PACA"
+version = "0.1.1"
+description = "Initialisation du package de test pour ORU-PACA"
 readme = "README.md"
 requires-python = ">=3.8"
-authors = [{ name = "Louis Clavel" }]
+authors = [{ name = "Louis Clavel", email = "votre-email@example.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
 
 [tool.setuptools]
+# Si votre code est dans un dossier 'src', utilisez ceci :
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
