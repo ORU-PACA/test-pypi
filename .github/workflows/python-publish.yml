@@ -43,7 +43,7 @@ jobs:
         with:
           packages-dir: dist/
           # On pointe vers l'URL du repo actuel sans slash final
-          repository-url: https://pypi.pkg.github.com/${{ github.repository }}
+          repository-url: https://upload.pypi.org/legacy/
           # On utilise le token automatique de GitHub
           password: ${{ secrets.GITHUB_TOKEN }}
           attestations: false
