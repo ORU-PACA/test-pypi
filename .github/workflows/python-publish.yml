@@ -21,8 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install build
           # Nettoyage des anciens builds pour éviter les fichiers 'unknown'
-          rm -rf dist
+          rm -rf build/ dist/ *.egg-inf
           python -m build
+          twine check dist/*
 
       - name: Upload distributions as artifact
         uses: actions/upload-artifact@v4
@@ -36,7 +37,8 @@ jobs:
     needs: release-build
     permissions:
       contents: read
-      packages: write  # Permission nécessaire pour uploader sur GitHub Packages
+      packages: write
+      id-token: write
 
     steps:
       - name: Retrieve release distributions
@@ -46,10 +48,9 @@ jobs:
           path: dist/
 
       - name: Publish to GitHub Packages
-        uses: pypa/gh-action-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@v1
         with:
           packages-dir: dist/
           # Note : Le slash final '/' après le repository est crucial pour éviter l'erreur 404
-          repository-url: https://pypi.pkg.github.com/${{ github.repository }}/
-          password: ${{ secrets.GITHUB_TOKEN }}
+          repository-url: https://pypi.pkg.github.com/${{ github.repository_owner }}/
           attestations: false
