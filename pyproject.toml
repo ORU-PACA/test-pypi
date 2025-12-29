@@ -3,13 +3,16 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "test-pypi"           # Ne changez pas ce nom pour l'instant
-version = "0.0.6"
+name = "oru-paca-test-init"
+version = "0.0.7"
 description = "Test d'initialisation"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "Louis Clavel" }]
 
-
 [tool.setuptools]
-packages = [] # Important pour un dummy package
+# Indique à setuptools de chercher le code dans le dossier 'src'
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

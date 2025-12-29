@@ -29,7 +29,7 @@ jobs:
       - release-build
     permissions:
       contents: read
-      packages: write  # Autorise la création du package sur GitHub
+      packages: write 
 
     steps:
       - name: Retrieve release distributions
@@ -42,5 +42,8 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
-          repository-url: https://pypi.pkg.github.com/ORU-PACA/oru-paca-test-init
+          # REMPLACEZ 'votre-nom-de-repo' par le nom réel du repository GitHub
+          repository-url: https://pypi.pkg.github.com/ORU-PACA/votre-nom-de-repo/
+          # Pour GitHub Packages, l'user est toujours 'token' par convention avec un PAT
+          user: __token__
           password: ${{ secrets.MY_NEW_TOKEN }}
