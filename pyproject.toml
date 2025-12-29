@@ -4,22 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "test-pypi"
-version = "0.1.2"
+version = "0.1.3"
 description = "Initialisation du package de test pour ORU-PACA"
 readme = "README.md"
-requires-python = ">=3.8"
-authors = [{ name = "Louis Clavel", email = "votre-email@example.com" }]
+requires-python = ">=3.11"
+authors = [{ name = "Louis Clavel" }]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
 
 [tool.setuptools]
-# Si votre code est dans un dossier 'src', utilisez ceci :
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [project.urls]
-Repository = "https://github.com/ORU-PACA/test-pypi"
+repository = "https://github.com/ORU-PACA/test-pypi"
