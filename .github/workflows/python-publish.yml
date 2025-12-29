@@ -46,8 +46,7 @@ jobs:
       - name: Publish to GitHub Packages
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          packages-dir: dist/
-          # L'URL doit se terminer par / pour éviter le 404 sur GitHub
+          password: ${{ secrets.GH_PAT }} # Utilisez un PAT au lieu du GITHUB_TOKEN
           repository-url: https://pypi.pkg.github.com/ORU-PACA/
-          password: ${{ secrets.GITHUB_TOKEN }}
-          attestations: false
+          # On laisse l'action gérer le build si besoin ou on pointe le dossier
+          packages-dir: dist/
