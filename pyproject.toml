@@ -4,14 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "oru-test-init-cl"
-version = "0.0.8"
-description = "Test d'initialisation"
+version = "0.0.9"                      # Pensez à incrémenter la version
+description = "Outil interne ORU-PACA"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [{ name = "Louis Clavel" }]
 
 [tool.setuptools]
-# Indique à setuptools de chercher le code dans le dossier 'src'
 package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
