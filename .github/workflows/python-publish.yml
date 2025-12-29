@@ -44,3 +44,4 @@ jobs:
           packages-dir: dist/
           # Pour le PyPI public, on utilise le token PyPI, pas le token GitHub
           password: ${{ secrets.PYPI_API_TOKEN }}
+          attestations: false
