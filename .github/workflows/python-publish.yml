@@ -38,12 +38,9 @@ jobs:
           name: release-dists
           path: dist/
 
-      - name: Publish release distributions to GitHub Packages
+      - name: Publish release distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
-          # On pointe vers l'URL du repo actuel sans slash final
-          repository-url: https://upload.pypi.org/legacy/
-          # On utilise le token automatique de GitHub
-          password: ${{ secrets.GITHUB_TOKEN }}
-          attestations: false
+          # Pour le PyPI public, on utilise le token PyPI, pas le token GitHub
+          password: ${{ secrets.PYPI_API_TOKEN }}
