@@ -1,4 +1,4 @@
-name: Upload Python Package to GitHub Packages
+name: Upload Python Package
 
 on:
   release:
@@ -15,8 +15,8 @@ jobs:
           python-version: "3.x"
       - name: Build release distributions
         run: |
-          python -m pip install --upgrade pip build
-          rm -rf dist/ build/ *.egg-info
+          python -m pip install build
+          rm -rf dist
           python -m build
       - name: Upload distributions
         uses: actions/upload-artifact@v4
@@ -36,14 +36,12 @@ jobs:
         with:
           name: release-dists
           path: dist/
+
       - name: Publish to GitHub Packages
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
-          # URL simplifiée pour l'organisation
-          repository-url: https://pypi.pkg.github.com/ORU-PACA/
-          # Utilisation du PAT manuel pour éviter l'erreur de Trusted Publishing
+          repository-url: https://pypi.pkg.github.com/ORU-PACA/test-pypi/
           password: ${{ secrets.GH_PAT }}
-          # Désactivation explicite des fonctions non supportées par GitHub
           attestations: false
-          print-hash: true
+          verbose: true

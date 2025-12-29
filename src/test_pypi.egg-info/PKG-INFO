@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: test-pypi
+Version: 0.2.1
+Summary: Initialisation du package de test pour ORU-PACA
+Author: Louis Clavel
+Project-URL: repository, https://github.com/ORU-PACA/test-pypi
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# test-pypi

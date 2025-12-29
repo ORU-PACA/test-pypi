@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+src/test-pypi/__init__.py
+src/test-pypi/script.py
+src/test_pypi.egg-info/PKG-INFO
+src/test_pypi.egg-info/SOURCES.txt
+src/test_pypi.egg-info/dependency_links.txt
+src/test_pypi.egg-info/top_level.txt
